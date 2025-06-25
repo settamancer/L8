@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <div id="sun"></div>
+    <div id="moon"></div>
+    <div class="select-container" style="margin-top: 30%;">
+        <select id="gender" onchange="updateGender()">
+            <option value="">SELECT GENDER</option>
+            <option value="man">MAN</option>
+            <option value="woman">WOMAN</option>
+        </select>
+    </div>
+
+    <div class="select-container">
+        <input type="time" name="time" id="time" onchange="updateTime()">
+    </div>
+
+    <div class="select-container">
+        <select id="dayOfWeek" onchange="updateDayOfWeek()">
+            <option value="">DAY OF WEEK</option>
+            <option value="man">EVWRY DAY</option>
+            <option value="woman">Monday - Friday</option>
+            <option value="woman">Monday - Saturday</option>
+            <option value="woman">Monday - Sunday</option>
+            <option value="woman">ON SIGNAL/option>
+        </select>
+    </div>
+
+    <div class="select-container">
+        <select id="region" onchange="updateCities()">
+            <option value="">-- Выберите регион --</option>
+        </select>
+    </div>
+
+    <div class="select-container">
+        <select id="city" onchange="updateDistricts()">
+            <option value="">-- Введите город --</option>
+        </select>
+    </div>
+
+    <div class="select-container">
+        <input class="button" type="button" value="Confirm" onclick="sendDataToTG()">
+    </div>
+
+    <div class="result" id="result">
+
+    </div>
+</body>
+
+</html>
